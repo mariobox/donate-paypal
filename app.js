@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const paypal = require('paypal-rest-sdk');
 
-const port = 3000;
+const port = 3030;
 
 paypal.configure({
   'mode': 'sandbox',
@@ -33,8 +33,8 @@ const create_payment_json = {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "https://mariosanchezcarrion.com/success",
-        "cancel_url": "https://mariosanchezcarrion.com/cancel"
+        "return_url": "/success",
+        "cancel_url": "/cancel"
     },
     "transactions": [{
         "item_list": {
@@ -101,7 +101,7 @@ app.get('/success', (req, res) => {
 app.get('/cancel', (req, res) => res.render('cancel'));
 
 // Web Server
-app.listen(3000, () => {
+app.listen(3030, () => {
   console.log(`Listening at port ${port}`);
 });
 

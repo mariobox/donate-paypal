@@ -8,7 +8,7 @@
 body {
 	font-family: 'Catamaran', 'Helvetica', 'Arial', sans-serif;
         font-size: 18px;
-	background-color: #fff;
+	background-color: yellow;
 	color: #000;
         -webkit-font-smoothing: aliased;
 }
@@ -30,7 +30,7 @@ a:hover {
 
 h1 {
 	font-size: 25px;
-	font-weight: 400;
+	font-weight: 600;
 	margin-bottom: 0px;
 }
 
@@ -67,10 +67,23 @@ ul a {
 }
 
 section#buscard {
-	position: absolute;
-        top: 10%;
-        left: 5%;
-        right: 5%;
+	margin: 5rem auto;
+	max-width: 500px;
+	text-align:center;	
+}
+
+button {
+  background-color: #000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 </style>
@@ -84,13 +97,12 @@ section#buscard {
 <body>
 
   <section id="buscard">
-    <h1><a href="http://mariosanchez.org">Mario Sanchez Carrion</a></h1>
-    <ul id="contact">
-      <li><a href="https://twitter.com/mariobox">@mariobox</a></li>
-      <li><a href="mailto:mario@mariosanchez.org?subject=Contact from mariosanchezcarrion.com">mario@mariosanchez.org</a></li>
-      <li><a href="http://mariosanchez.org">mariosanchez.org</a></li>
-    </ul>
-    <h2><a href="http://www.mariosanchez.org/">Web Development Site</a></h2>
+    <h1>COFFEE FOR CODING</a></h1>
+    <p>Donate a cup.</p>
+    <p>Support open-source!</p>
+    <form action="/pay" method="post">
+    <button type="submit"><strong>DONATE $2</strong></button>   
+    </form>
   </section>
   
 </body>
