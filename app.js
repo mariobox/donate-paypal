@@ -22,10 +22,6 @@ app.get("/", (req, res) => {
   res.render('index');
 });
 
-app.get("/donate", (req, res) => {
-  res.render('donate');
-});
-
 app.post("/pay", (req, res) => {
 const create_payment_json = {
     "intent": "sale",
@@ -33,8 +29,9 @@ const create_payment_json = {
         "payment_method": "paypal"
     },
     "redirect_urls": {
-        "return_url": "/success",
-        "cancel_url": "/cancel"
+      // you will need to replace localhost with your server url
+        "return_url": "http://localhost/success",
+        "cancel_url": "http://localhost/cancel"
     },
     "transactions": [{
         "item_list": {
